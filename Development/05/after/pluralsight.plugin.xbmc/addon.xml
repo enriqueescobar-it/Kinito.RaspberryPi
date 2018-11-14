@@ -1,0 +1,13 @@
+<addon id="pluralsight.plugin.xmbc" version="0.0.2" name="Pluralsight" provider-name="Jon Flanders">
+<extension point="xbmc.python.pluginsource" library="addon2.py">
+<provides>video</provides>
+<requires>
+ <import addon="xbmc.python" version="1.0"/>
+</requires>
+</extension>
+<extension point="xbmc.addon.metadata">
+<summary>Pluralsight</summary>
+<description>Pluralsight</description>
+<platform>all</platform>
+</extension>
+</addon>
