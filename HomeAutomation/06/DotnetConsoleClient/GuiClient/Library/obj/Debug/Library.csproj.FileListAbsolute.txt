@@ -1,0 +1,7 @@
+C:\Users\Erik\Desktop\DotnetConsoleClient\GuiClient\Library\bin\Debug\Library.dll
+C:\Users\Erik\Desktop\DotnetConsoleClient\GuiClient\Library\bin\Debug\Library.pdb
+C:\Users\Erik\Desktop\DotnetConsoleClient\GuiClient\Library\obj\Debug\Library.csprojResolveAssemblyReference.cache
+C:\Users\Erik\Desktop\DotnetConsoleClient\GuiClient\Library\obj\Debug\Library.dll
+C:\Users\Erik\Desktop\DotnetConsoleClient\GuiClient\Library\obj\Debug\Library.pdb
+C:\Users\Erik\Desktop\DotnetConsoleClient\GuiClient\Library\bin\Debug\RestSharp.dll
+C:\Users\Erik\Desktop\DotnetConsoleClient\GuiClient\Library\bin\Debug\RestSharp.xml

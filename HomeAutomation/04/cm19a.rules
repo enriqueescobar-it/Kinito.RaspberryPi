@@ -1,0 +1,4 @@
+# Sets user permissions for the CM19a X10 US Wireless Transceiver Users who are members of the cm19a group have read 
+# and write access to this device Vendor id = 3015 (decimal), 0bc7(hex), X10 Wireless Technology Inc Product id = 2 
+# (decimal), 0002 (hex), USB Transceiver
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0bc7", ATTRS{idProduct}=="0002", MODE:="0666", GROUP:="cm19a", SYMLINK+="cm19a"

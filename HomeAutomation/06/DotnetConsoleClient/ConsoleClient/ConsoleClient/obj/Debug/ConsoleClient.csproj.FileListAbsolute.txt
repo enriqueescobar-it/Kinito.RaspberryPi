@@ -1,0 +1,8 @@
+C:\Users\Erik\Desktop\DotnetConsoleClient\ConsoleClient\ConsoleClient\bin\Debug\ConsoleClient.exe.config
+C:\Users\Erik\Desktop\DotnetConsoleClient\ConsoleClient\ConsoleClient\bin\Debug\ConsoleClient.exe
+C:\Users\Erik\Desktop\DotnetConsoleClient\ConsoleClient\ConsoleClient\bin\Debug\ConsoleClient.pdb
+C:\Users\Erik\Desktop\DotnetConsoleClient\ConsoleClient\ConsoleClient\bin\Debug\RestSharp.dll
+C:\Users\Erik\Desktop\DotnetConsoleClient\ConsoleClient\ConsoleClient\bin\Debug\RestSharp.xml
+C:\Users\Erik\Desktop\DotnetConsoleClient\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.csprojResolveAssemblyReference.cache
+C:\Users\Erik\Desktop\DotnetConsoleClient\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.exe
+C:\Users\Erik\Desktop\DotnetConsoleClient\ConsoleClient\ConsoleClient\obj\Debug\ConsoleClient.pdb
