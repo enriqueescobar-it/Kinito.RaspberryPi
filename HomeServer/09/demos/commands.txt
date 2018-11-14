@@ -1,0 +1,71 @@
+# Add the btsync repository list for apt-get
+sudo nano /etc/apt/sources.list.d/btsync.list
+
+# Add the following lines to the new file
+deb http://debian.yeasoft.net/btsync wheezy main contrib non-free
+deb-src http://debian.yeasoft.net/btsync wheezy main contrib non-free
+
+# Add the repository's signing key
+sudo gpg --keyserver pgp.mit.edu --recv-keys 6BF18B15
+sudo gpg --armor --export 6BF18B15 | sudo apt-key add -
+
+# Update apt's list of available software packages
+sudo apt-get update
+
+# Install btsync
+sudo apt-get install btsync
+
+# Re-run the btsync package configuration tool if needed
+dpkg-reconfigure btsync
+
+# Check the btsync service's status
+sudo service btsync status
+
+# See the contents of the license folder
+sudo ls /var/lib/btsync/License
+
+# Remove the btsync license file
+sudo rm /var/lib/btsync/License/1/license.bin
+
+# Restart the btsync service
+sudo service btsync restart
+
+# Create a new "sync" folder in the data partition
+cd /mnt/data
+sudo mkdir sync
+
+# Grant ownership of the sync folder to btsync
+sudo chown btsync:btsync sync
+
+# Try to create a test file in the sync folder
+cd sync
+touch test.txt
+
+# Grant the btsync group write permissions to the sync folder
+sudo chmod g+w .
+
+# Add the "pi" user to the "btsync" group
+sudo usermod -a -G btsync pi
+
+# Check the current user's groups
+groups
+
+# Log out (and then back in) to apply new group memberships
+logout
+
+# Create test file
+cd /mnt/data/sync
+touch test.txt
+
+# View test file contents
+cat test.txt
+
+# View hidden folders
+ls -a
+
+# View archive contents
+ls .sync/Archive
+
+# Grant btsync group write permission to public sync folder
+cd /mnt/data/public
+sudo chmod g+w sync-public

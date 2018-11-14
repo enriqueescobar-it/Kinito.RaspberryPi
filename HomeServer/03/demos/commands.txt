@@ -1,0 +1,62 @@
+# Check current network configuration
+ifconfig
+
+# Edit network configuration
+sudo nano /etc/network/interfaces
+
+# Reboot the system
+sudo reboot
+
+# Create webmin.sources.list
+sudo nano /etc/apt/sources.list.d/webmin.list
+# Add the following lines
+# deb http://download.webmin.com/download/repository sarge contrib
+# deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib
+
+# Install Webmin signing key
+sudo su
+cd /root
+wget http://www.webmin.com/jcameron-key.asc
+apt-key add jcameron-key.asc
+exit
+
+# Update APT
+sudo apt-get update
+sudo apt-get upgrade
+
+# Install Webmin
+sudo apt-get install webmin
+
+# Install x11VNC
+sudo apt-get install x11vnc
+
+# Show the desktop
+startx
+
+# Create x11VNC password
+x11vnc -storepasswd
+
+# Create desktop configuration file
+mkdir /home/pi/.config/autostart
+nano /home/pi/.config/autostart/x11vnc.desktop
+# Add the following lines[Desktop Entry]
+# Encoding=UTF-8
+# Type=Application
+# Name=X11VNC
+# Exec=x11vnc -forever -usepw -display :0 -ultrafilexfer
+# StartupNotify=false
+# Terminal=false
+# Hidden=false
+
+# Reboot again
+sudo reboot
+
+# Show desktop
+startx
+
+# Edit main config file
+sudo nano /boot/config.txt
+
+# Reboot again
+sudo reboot
+

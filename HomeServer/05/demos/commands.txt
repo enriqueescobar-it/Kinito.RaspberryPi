@@ -1,0 +1,24 @@
+# Install Samba support
+sudo apt-get install samba samba-common-bin
+
+# Create public directory
+cd /mnt/data
+sudo mkdir public
+
+# View detailed listing of external drive contents
+ls -l
+
+# Grant write permissions to the public directory for group and others
+sudo chmod go+w public
+
+# Check results
+ls -l
+
+# Edit Samba configuration file
+sudo nano /etc/samba/smb.conf
+
+# Test Samba configuration file
+testparm
+
+# Restart Samba service
+sudo service samba restart

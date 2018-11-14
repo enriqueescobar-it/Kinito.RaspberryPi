@@ -1,0 +1,42 @@
+# Force filesystem consistency check
+sudo touch /forcefsck
+sudo reboot
+
+# View current boot configuration
+cat /boot/cmdline.txt
+
+# Clone root partition to hard drive
+sudo dd if=/dev/mmcblk0p2 of=/dev/sda1 bs=32M conv=noerror,sync
+
+# Check new copy for errors
+sudo e2fsck –f /dev/sda1
+
+# Expand filesystem
+sudo resize2fs /dev/sda1
+
+# Examine external hard drive
+sudo gdisk /dev/sda
+# Write down Partition Unique GUID value
+
+# Edit boot configuration
+sudo nano /boot/cmdline.txt
+# Change "root=mmcblk0p2" to "root=PARTUUID=[ID FROM PREVIOUS STEP]"
+# Add "rootdelay=5" to end of line
+
+# Reboot to apply changes 
+sudo reboot
+
+# Get filesystem ids
+sudo blkid
+
+# Update fstab
+sudo nano /etc/fstab
+# Change "“/dev/mmcblk0p2" to "/dev/disk/by-uuid/[ID FROM PREVIOUS STEP]"
+
+# Reboot and check fstab
+sudo reboot
+cat /etc/fstab
+
+# Check and expand swap file
+swapon -s
+sudo nano /etc/dphys-swapfile

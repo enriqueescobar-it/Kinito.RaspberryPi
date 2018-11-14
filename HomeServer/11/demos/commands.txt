@@ -1,0 +1,41 @@
+# Install Apache
+sudo apt-get install apache2
+
+# Install MySQL
+sudo apt-get install mysql-server-5.5
+
+# Check MySQL
+sudo mysql –u root –p
+# show databases;
+# exit
+
+# Lock down MySQL
+/usr/bin/mysql_secure_installation
+
+# Install PHP
+sudo apt-get install php5 php5-mysql php5-gd
+
+# Create wordpress database and user
+sudo mysql –u root –p
+# create database wordpress;
+# create user wpuser;
+# set password for wpuser = password(“mypasswd”);
+# grant all privileges on wordpress.* to wpuser@localhost identified by ‘mypasswd’;
+# exit
+sudo service mysql restart
+
+# Install WordPress
+sudo apt-get install wordpress
+
+# Create symbolic link to WordPress inside the www directory
+sudo ln -s /usr/share/wordpress /var/www
+
+# Copy sample WordPress config file
+sudo cp /usr/share/wordpress/wp-config-sample.php /etc/wordpress/config-default.php
+
+# Edit the configuration file
+sudo nano /etc/wordpress/config-default.php
+# Set the DB_NAME, DB_USER, and DB_PASSWORD
+
+# Restart Apache
+sudo service apache2 restart

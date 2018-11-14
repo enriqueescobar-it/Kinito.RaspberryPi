@@ -1,0 +1,85 @@
+# Run the partition editor
+sudo parted
+
+# List all drives and partitions
+print all
+
+# Edit the main configuration file if needed
+sudo nano /boot/config.txt
+# Add the following to the end
+# max_usb_current=1
+
+# Run the partition editor
+sudo parted
+
+# List all drives and partitions
+print all
+
+# Select which drive we're interested interested
+select /dev/sda
+
+# List just that one drive's partitions
+print
+
+# Create new GUID partition table
+mklabel gpt
+
+# Verify results
+print
+
+# Create new partition
+mkpart
+# Provide the following information when prompted
+# Partition name: os
+# File system type: ext4
+# Start: 0gb
+# End: 16gb
+
+# Create data partition (ext4 version)
+mkpart data ext4 16gb 100%
+# Create data partition (NTFS version)
+mkpart data ntfs 16gb 100%
+
+# Verify results
+print
+
+# Exit parted
+q
+
+# Format data partition (ext4 version)
+sudo mkfs.ext4 /dev/sda2
+
+# Install NTFS support
+sudo apt-get install ntfs-3g ntfs-config ntfsprogs gdisk
+
+# Format data partition (NTFS version)
+sudo mkfs.ntfs -Q -L data /dev/sda2
+
+# Create mount point for data partition
+cd /mnt
+sudo mkdir data
+
+# See logged-in user's groups
+groups
+
+# Create and view placeholder file (to ensure the mount works)
+sudo touch /mnt/data/placeholder
+
+# Manually mount external drive
+sudo mount /dev/sda2 /mnt/data
+
+# View filesystem configuration
+cat /etc/fstab
+
+# View known filesystem Ids
+sudo blkid
+
+# Edit filesystem configuration
+sudo nano /etc/fstab
+
+# Reboot
+sudo reboot
+
+# Check that the drive mounted
+ls /mnt/data
+

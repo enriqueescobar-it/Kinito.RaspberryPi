@@ -1,0 +1,135 @@
+# Install MiniDLNA
+sudo apt-get install minidlna
+
+# Edit apt-get sources
+sudo nano /etc/apt/sources.list
+
+# Create minidlna directory
+cd /mnt data
+sudo mkdir minidlna
+
+# View minidlna directory permissions
+ls -l
+
+# Change ownership of minidlna directory
+sudo chown minidlna:minidlna /mnt/data/minidlna
+
+# Create music directory
+mkdir /mnt/data/public/music
+
+# Change ownership of music direcotry
+sudo chmod nobody:nogroup /mnt/data/public/music
+
+# Create "pictures" and "videos" folders remotely over the share
+# View resulting permissions
+cd /mnt/data/public
+ls -l
+
+# Edit MiniDLNA configuration
+sudo nano /etc/minidlna.conf
+
+# Add media folders
+# media_dir=A,/mnt/data/public/music
+# media_dir=A,/mnt/data/public/pictures
+# media_dir=A,/mnt/data/public/video
+
+# Set database and log folders
+# db_dir=/mnt/data/minidlna
+# log_dir=/mnt/data/minidlna/log
+
+# Restart minidlna service
+sudo service minidlna restart
+
+# Check minidlna service status
+sudo service minidlna status
+
+# Check minidlna logs
+cat /mnt/data/minidlna/logs/minidlna.log | more
+
+# Increase "watches"
+sudo nano /etc/sysctl.conf
+
+# Add to the bottom of the file
+# fs.inotify.max_user_watches = 65536
+
+# Set minidlna to run on reboot
+sudo update-rc.d minidlna defaults
+
+# View running processes
+top
+
+# Install htop
+sudo apt-get install htop
+
+# Add "Jessie" repositories
+sudo nano /etc/apt/sources.list
+# Duplicate "wheezy" line, changing "wheezy" to "jessie"
+
+# Update apt-get package list
+sudo apt-get update
+
+# Reinstall MiniDLNA
+sudo service minidlna stop
+sudo apt-get install minidlna
+
+# Re-apply configuration changes
+sudo nano /etc/minidlna.conf
+# media_dir=A,/mnt/data/public/music
+# media_dir=P,/mnt/data/public/pictures
+# media_dir=V,/mnt/data/public/video
+# db_dir=/mnt/data/minidlna
+# log_dir=/mnt/data/minidlna/log
+
+# Disable "Jessie" repository
+sudo nano /etc/apt/source.list
+# Comment out the Jessie line
+
+# Reboot
+sudo reboot
+
+# Check minidlna versions
+apt-cache policy minidlna
+
+#================================================#
+# Roll back to previous backup before continuing #
+#================================================#
+
+# Add Plex Media Server repository
+sudo su
+cd /root
+wget http://dev2day.de/pms/dev2day-pms.gpg.key
+apt-key add dev2day-pms.gpg.key
+exit
+
+cat /etc/apt/sources.list
+sudo nano /etc/apt/sources.list.d/pms.list
+# Paste in the following, substituting "jessie" for "wheezy" as appropriate
+# deb http://dev2day.de/pms/ wheezy main
+
+# Install Plex Media Server
+sudo apt-get update
+sudo apt-get install plexmediaserver
+
+# Check PMS service
+sudo service plexmediaserver status
+
+# Stop PMS service
+sudo service plexmediaserver stop
+
+# Stop all Plex processes
+sudo killall -u plex
+
+# Move PMS directory to hard drive
+sudo mv /var/lib/plexmediaserver/ /mnt/data/plexmediaserver/
+
+# Create symbolic link to new location
+sudo ln -s /mnt/data/plexmediaserver/ /var/lib/plexmediaserver
+
+# Restart PMS
+sudo service plexmediaserver start
+
+# Edit plex.js
+cd /mnt/data/plexmediaserver/Library/Application Support/Plex Media Server/Plug-ins/WebClient.bundle/Contents/Resources/js/
+sudo nano plex.js
+# Search for "validateTranscoder:function(e,t){"...
+# Change to "validateTranscoder:function(e,t){return false;"...

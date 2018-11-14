@@ -1,0 +1,87 @@
+# Install OpenVPN
+sudo apt-get install openssl openvpn
+
+# Copy sample configuration files as a starting point
+sudo cp -r /usr/share/doc/openvpn/examples/easy-rsa/2.0 /etc/openvpn/easy-rsa
+
+# Customize the vars file
+cd /etc/openvpn/easy-rsa
+sudo nano vars
+# export EASY_RSA="/etc/openvpn/easy-rsa"
+# Edit "export" variables at the bottom of the file to match your location
+
+# "Source" vars file
+sudo su
+source ./vars
+
+# Build certificates
+./clean-all
+./build-ca
+
+# Build server key
+./build-key-server RPHS
+./build-dh
+
+# Build HMAC
+openvpn --genkey --secret keys/ta.key
+
+# View keys
+ls keys
+
+# Create server configuration
+nano server.conf
+# Paste in contents from tinyurl.com/rphs-openvpn or from included files
+
+# Set up NAT
+nano /etc/sysctl.conf
+# Uncomment approprate line to enable IPv4 packet forwarding
+
+# Apply changes
+sysctl -p
+
+# Create nat-rules file
+nano /etc/openvpn/nat-rules.sh
+# Paste in contents from tinyurl.com/rphs-openvpn or from included files
+
+# Make nat-rules executable
+cd ..
+ls -l
+chmod u+x nat-rules.sh
+ls -l
+
+# Update network interfaces to run nat-rules
+nano /etc/network/interfaces
+# Insert the following line after the existing eth0 line
+pre-up /etc/openvpn/nat-rules.sh
+
+# Generate client keys
+cd easy-rsa
+./build-key-pass [NAME]
+openssl rsa -in [NAME].key -des3 -out [NAME].3des.key
+ls -l
+
+# Create makeovpn script
+cd easy-rsa/keys
+nano makeovpn.sh
+# Paste in contents from tinyurl.com/rphs-openvpn or from included files
+
+# Make script executable
+chmod u+x makeovpn.sh
+
+# Create Defaults file
+nano Default.txt
+
+# Run script
+./makeovpn.sh
+
+# Reboot to apply all changes
+sudo reboot
+
+# Generate additional keys
+sudo su
+cd /etc/openvpn/easy-rsa
+source vars
+./build-key-pass NAME
+cd keys
+openssl rsa -in NAME.key -des3 -out NAME.3des.key
+./makeovpn.sh

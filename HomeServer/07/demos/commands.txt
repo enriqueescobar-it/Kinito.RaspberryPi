@@ -1,0 +1,74 @@
+# Check Java version
+java -version
+
+# Install Java Native Access library
+sudo apt-get install libjna-java
+
+# Open up permissions on public directory
+sudo chmod -R ugo+rwx public
+
+# Extract installer
+cd /mnt/data/public/downloads
+ls
+tar zxvf CrashPlan[TAB]
+
+# View Downloads
+ls
+
+# Install CrashPlan
+cd CrashPlan-install
+sudo ./install.sh
+
+# Check CrashPlan service status and try to start
+service crashplan status
+sudo service crashplan start
+service crashplan status
+
+# Remove x86-based JRE 7
+sudo rm -r /usr/local/crashplan/jre
+
+# Create symbolic link to ARM-based JRE 8
+sudo ln -s /usr/lib/jvm/jdk-8-oracle-arm-vfp-hflt /usr/local/crashplan/jre
+
+# List files in CrashPlan directory
+ls /usr/local/crashplan
+
+# List files in linked jre directory
+ls /usr/local/crashplan/jre
+
+# Start CrashPlan service and check status
+sudo service crashplan start
+service crashplan status
+
+# Check CrashPlan error log
+cat /usr/local/crashplan/log/engine_error.log
+
+# Replace libjtux.so
+cd /usr/local/crashplan 
+sudo rm libjtux.so 
+sudo wget http://www.jonrogers.co.uk/wp-content/uploads/2012/05/libjtux.so
+
+# Replace libmd5.so
+sudo rm libmd5.so 
+sudo wget http://www.jonrogers.co.uk/wp-content/uploads/2012/05/libmd5.so -O libmd5.so
+
+# Update CrashPlanEngine
+sudo nano /usr/local/crashplan/bin/CrashPlanEngine
+# Search (ctrl-w) for "FULL_CP="
+# Insert "/usr/share/java/jna.jar:" (without quotes) after opening quotes.
+
+# Restart and check CrashPlan again
+sudo service crashplan restart
+service crashplan status
+cat /usr/local/crashplan/log/engine_error.log
+
+# Run CrashPlan automatically on each reboot
+sudo update-rc.d crashplan defaults
+
+# Update "Standard Widget Toolkit" to arm-compatible version
+sudo apt-get install libswt-gtk-3-java libswt-cairo-gtk-3-jni
+sudo cp /usr/lib/java/swt-gtk-3.8.0.jar /usr/local/crashplan/lib/swt.jar
+
+# Test CrashPlan UI
+startx
+# Double-click CrashPlan icon on desktop and configure
