@@ -1,65 +1,21 @@
 # Kinito.RaspberryPi
 Kinito RaspberryPi Description
 
-## HomeServer
-
-### 01
-
-[Original config](/HomeServer/01_demos.txt)
-
-### 03
+## Update & upgrade system
 
 ```
 sudo apt-get update
 sudo apt-get upgrade
 ```
 
-#### SSH
+## Improve your router settings
 
-```
-sudo raspi-config
-```
+Use Android App 'WiFi Analyzer'
 
-#### Webmin
+Check your channel and choose and empty one
 
-##### Webmin source list
+![IMG_Router_Channels_0](Screenshot_20181126-133828.png "Router Channels 0")
 
-`  sudo nano /etc/apt/sources.list.d/webmin.list
-# Add the following lines
-# deb http://download.webmin.com/download/repository sarge contrib
-# deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib`
+## 02
 
 
-##### Webmin key
-
-## 04
-
-
-### 05
-
-
-### 06
-
-
-### 07
-
-
-### 08
-
-
-### 09
-
-
-### 10
-
-
-### 11
-
-
-### 12
-
-## Home Automation
-
-## Development
-
-## SenseHAT
