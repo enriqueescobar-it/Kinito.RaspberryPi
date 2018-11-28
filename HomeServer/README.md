@@ -178,3 +178,25 @@ Update '/etc/fstab' adding lines for each
 /dev/disk/by-uuid/IDNUMBER	/media/usb-ntfs	ntfs	defaults,noatime	0	0
 ```
 
+Install Samba support
+
+```
+sudo apt-get install samba samba-common-bin
+```
+
+## Create SAMBA shared foolders
+
+Create public directories and grant permissions
+
+```
+sudo mkdir /media/usb-{ext4,ntfs}/public
+sudo chmod go+w /media/usb-{ext4,ntfs}/public
+```
+
+Edit Samba configuration file, test it and restart service
+
+```
+sudo nano /etc/samba/smb.conf
+testparm
+sudo service samba restart
+```
