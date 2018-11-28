@@ -95,3 +95,60 @@ Reboot again show desktop
 startx
 ```
 
+## Mount external disk
+
+Add power to USB port Add the following to the end
+
+```
+sudo echo -e "max_usb_current=1" >> /boot/config.txt
+```
+
+Install NTFS support
+
+```
+sudo apt-get install ntfs-3g ntfs-config ntfsprogs gdisk
+```
+
+Use parted to check USB  and print devices
+
+```
+sudo parted
+print all
+select /dev/sda
+print
+```
+
+Create new GUID partition table and verify
+
+```
+mklabel gpt
+print
+```
+
+Create 16G 'os' partition
+
+```
+mkpart
+# Provide the following information when prompted
+# Partition name: os
+# File system type: ext4
+# Start: 0gb
+# End: 16gb
+```
+
+Create 6G 'data-ext4' partition
+
+```
+mkpart data-ext4 ext4 16gb 75%
+```
+
+Create 2G data-ntfs partition
+
+```
+mkpart data-ntfs ntfs 22gb 100%
+print
+q
+```
+
+
+
