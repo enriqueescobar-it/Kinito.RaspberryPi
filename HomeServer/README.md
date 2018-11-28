@@ -142,7 +142,7 @@ Create 6G 'data-ext4' partition
 mkpart data-ext4 ext4 16gb 75%
 ```
 
-Create 2G data-ntfs partition
+Create 2G 'data-ntfs' partition
 
 ```
 mkpart data-ntfs ntfs 22gb 100%
@@ -150,5 +150,31 @@ print
 q
 ```
 
+Format both
 
+```
+sudo mkfs.ext4 /dev/sda2
+sudo mkfs.ntfs -Q -L data /dev/sda3
+```
+
+Create mount folders and mount
+
+```
+sudo mkdir /media/usb-{ext4,ntfs}
+sudo mount /dev/sda2 /media/usb-ext4
+sudo mount /dev/sda3 /media/usb-ntfs
+```
+
+Fetch each partition UID
+
+```
+sudo blkid
+```
+
+Update '/etc/fstab' adding lines for each
+
+```
+/dev/disk/by-uuid/IDNUMBER	/media/usb-ext4	ext	defaults,noatime	0	0
+/dev/disk/by-uuid/IDNUMBER	/media/usb-ntfs	ntfs	defaults,noatime	0	0
+```
 
