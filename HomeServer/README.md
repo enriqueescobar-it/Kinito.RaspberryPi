@@ -32,7 +32,9 @@ sudo touch /etc/apt/sources.list.d/webmin.list
 ```
 
 Add the following lines
+
 'deb http://download.webmin.com/download/repository sarge contrib'
+
 'deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib'
 
 ```
