@@ -21,6 +21,10 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
+## Scan with AngryIP scanner
+
+http://angryip.org/
+
 ## Improve your router settings
 
 Use Android App 'WiFi Analyzer'
