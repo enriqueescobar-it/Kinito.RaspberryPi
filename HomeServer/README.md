@@ -182,6 +182,10 @@ Install Samba support
 
 ```
 sudo apt-get install samba samba-common-bin
+sudo apt-get remove --purge samba
+sudo apt-get remove --purge smbclient libsmbclient
+sudo apt-get install samba samba-common-bin
+sudo apt-get install smbclient libsmbclient
 ```
 
 ## Create SAMBA shared foolders
