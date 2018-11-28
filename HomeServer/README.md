@@ -203,4 +203,5 @@ Edit Samba configuration file, test it and restart service
 sudo nano /etc/samba/smb.conf
 testparm
 sudo service samba restart
+sudo /etc/init.d/samba restart
 ```
