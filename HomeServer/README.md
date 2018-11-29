@@ -213,6 +213,12 @@ https://www.youtube.com/watch?v=pUBMcsvJfe4
 
 https://arashmilani.com/post?id=53
 
+http://www.pivpn.io/
 
+http://kamilslab.com/2017/01/22/how-to-turn-your-raspberry-pi-into-a-home-vpn-server-using-pivpn/
+
+https://chasingtech.net/wp/2017/01/03/pivpn-create-your-own-vpn-for-your-home-network/
+
+https://blog.vigilcode.com/2016/04/pivpn-easiest-quickest-setup-of-openvpn/
 
 
