@@ -25,7 +25,15 @@ sudo apt-get upgrade
 
 http://angryip.org/
 
-## Improve your router settings
+## Improve your intrusion check
+
+Android App 'Fing'
+
+## Map network
+
+Android App 'WiGLE WiFi'
+
+## Improve your router channel settings
 
 Use Android App 'WiFi Analyzer'
 
