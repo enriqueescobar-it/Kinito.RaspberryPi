@@ -202,3 +202,13 @@ testparm
 sudo service samba restart
 sudo /etc/init.d/samba restart
 ```
+
+## OpenVPN
+
+### PiVPN
+
+https://www.youtube.com/watch?v=9RSHSt4RuLk
+
+https://www.youtube.com/watch?v=pUBMcsvJfe4
+
+
