@@ -221,4 +221,6 @@ https://chasingtech.net/wp/2017/01/03/pivpn-create-your-own-vpn-for-your-home-ne
 
 https://blog.vigilcode.com/2016/04/pivpn-easiest-quickest-setup-of-openvpn/
 
+https://melgrubb.com/2016/12/11/rphs-v2-openvpn/
+
 
