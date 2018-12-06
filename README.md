@@ -35,6 +35,15 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
+## Unify root path
+
+```
+	if [ ! -e "/etc/bash.bashrc" ] ;
+	  then
+        ln -s /etc/bashrc /etc/bash.bashrc ;
+	fi ;
+```
+
 ## Scan with AngryIP scanner
 
 http://angryip.org/
