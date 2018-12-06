@@ -50,6 +50,13 @@ Check your new signal | Validate your new speed
  ![IMG_Router_Channels_2](Screenshot_20181126-135516.png "Router Channels 2") | ![IMG_Router_Channels_3](Screenshot_20181126-133955.png "Router Channels 3")
 
 
-## 02
+## TO DO
 
+https://rootsaid.com/home-automation-ubidots/
+
+https://help.ubidots.com/iot-projects-tutorials/diy-raspberry-pi-temperature-system-with-ubidots
+
+https://help.ubidots.com/connect-your-devices/connect-the-raspberry-pi-with-ubidots
+
+https://github.com/ryudolow/GreenPi/wiki/Configure-your-Raspberry-Pi-to-use-Ubidots-Python-API-Client
 
