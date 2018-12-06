@@ -49,6 +49,7 @@ Check your new signal | Validate your new speed
 ---------|----------
  ![IMG_Router_Channels_2](Screenshot_20181126-135516.png "Router Channels 2") | ![IMG_Router_Channels_3](Screenshot_20181126-133955.png "Router Channels 3")
 
+http://www.canyouseeme.org/
 
 ## TO DO
 
@@ -60,3 +61,8 @@ https://help.ubidots.com/connect-your-devices/connect-the-raspberry-pi-with-ubid
 
 https://github.com/ryudolow/GreenPi/wiki/Configure-your-Raspberry-Pi-to-use-Ubidots-Python-API-Client
 
+https://www.min.at/prinz/?x=entry:entry150301-162949
+
+https://www.min.at/prinz/?x=entry:entry160805-124148
+
+https://www.hackster.io/dreamteam/gym-bud-with-fitbit-alexa-and-rpi-development-platform-a180c8
