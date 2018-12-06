@@ -1,6 +1,20 @@
 # Kinito.RaspberryPi
 Kinito RaspberryPi Description
 
+https://www.banggood.com/search/raspberry-pi-3-cases.html?sbc=1
+
+https://www.banggood.com/Expansion-Board-GPIO-With-Screw-Nut-Adhesinverubber-Feet-Nylon-Fixed-Seat-For-Raspberry-Pi-23-p-1216221.html?rmmds=search&cur_warehouse=CN
+
+https://www.banggood.com/Raspberry-Pi-X820-V3_0-SSDHDD-SATA-Storage-Board-Matching-Metal-Case-p-1349370.html?rmmds=search&cur_warehouse=CN
+
+https://www.banggood.com/X850-mSATA-SSD-Storage-Expansion-Board-for-Raspberry-Pi-3-Model-B-2B-B-p-1170358.html?rmmds=detail-left-hotproducts__1&cur_warehouse=CN
+
+https://www.banggood.com/X820-2_5-Inch-SATA-HDD-SSD-USB3_0-Storage-Expansion-Board-For-Raspberry-Pi-3-Model-B-2B-B-p-1170391.html?rmmds=detail-top-buytogether-auto&cur_warehouse=CN
+
+https://www.amazon.ca/gp/product/B014T2IHQ8/ref=ox_sc_saved_title_2?smid=A16L2DSZFKYSND&psc=1
+
+https://www.amazon.ca/gp/product/B074P27K5S/ref=ox_sc_saved_title_1?smid=A1JJS9YI21E99N&psc=1
+
 ## Initial setup
 
 1. Expand Filesystem: no need to do this — some may disagree on this point
