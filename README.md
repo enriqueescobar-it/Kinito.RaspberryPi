@@ -38,10 +38,34 @@ sudo apt-get upgrade
 ## Unify root path
 
 ```
-	if [ ! -e "/etc/bash.bashrc" ] ;
-	  then
-        ln -s /etc/bashrc /etc/bash.bashrc ;
-	fi ;
+if [ ! -e "/etc/bash.bashrc" ] ;
+  then
+    ln -s /etc/bashrc /etc/bash.bashrc ;
+fi ;
+if [ ! -d "/media" ] ;
+  then
+    ln -s /Volumes /media ;
+fi ;
+if [ ! -d "/lib" ] ;
+  then
+    ln -s /Library /lib ;
+fi ;
+if [ ! -d "/boot" ] ;
+  then
+    mkdir /boot ;
+fi ;
+if [ ! -d "/initrd" ] ;
+  then
+    mkdir /initrd ;
+fi ;
+if [ ! -d "/misc" ] ;
+  then
+    mkdir /misc ;
+fi ;
+if [ ! -d "/mnt" ] ;
+  then
+    mkdir /mnt ;
+fi ;
 ```
 
 ## Scan with AngryIP scanner
