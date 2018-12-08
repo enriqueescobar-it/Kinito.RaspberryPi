@@ -30,6 +30,7 @@ https://www.amazon.ca/gp/product/B074P27K5S/ref=ox_sc_saved_title_1?smid=A1JJS9Y
 
 ## Increase RAM
 
+```
 sudo su
 service dphys-swapfile stop
 nano /etc/dphys-swapfile
@@ -40,6 +41,7 @@ nano /etc/dphys-swapfile
 	# to stand a micro SD card long use.
 service dphys-swapfile start
 dpkg-reconfigure dash
+```
 
 ## Update & upgrade system
 
