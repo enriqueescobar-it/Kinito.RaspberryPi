@@ -40,7 +40,6 @@ nano /etc/dphys-swapfile
 	# the value of CONF_SWAPSIZE to the initial value in order
 	# to stand a micro SD card long use.
 service dphys-swapfile start
-dpkg-reconfigure dash
 ```
 
 ## Update & upgrade system
