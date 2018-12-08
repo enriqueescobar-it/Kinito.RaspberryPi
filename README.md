@@ -28,6 +28,19 @@ https://www.amazon.ca/gp/product/B074P27K5S/ref=ox_sc_saved_title_1?smid=A1JJS9Y
 7. Overclock: this is up to you, I usually choose Medium, which makes the Pi run a little bit faster at the expense of power and potential component damange
 8. Advanced options: choose A4 SSH -- this will enable secure shell access, which means that you can control your Raspberry Pi from a remote computer (extremely useful)
 
+## Increase RAM
+
+sudo su
+service dphys-swapfile stop
+nano /etc/dphys-swapfile
+	# The default value of CONF_SWAPSIZE in Raspbian is 100.
+	# We will need to change this to: (empty) ,1024, and so on.
+	# After installing RStudio, it would be better to restore
+	# the value of CONF_SWAPSIZE to the initial value in order
+	# to stand a micro SD card long use.
+service dphys-swapfile start
+dpkg-reconfigure dash
+
 ## Update & upgrade system
 
 ```
