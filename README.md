@@ -1,6 +1,8 @@
 # Kinito.RaspberryPi
 Kinito RaspberryPi Description
 
+## Goodies
+
 https://www.banggood.com/search/raspberry-pi-3-cases.html?sbc=1
 
 https://www.banggood.com/Expansion-Board-GPIO-With-Screw-Nut-Adhesinverubber-Feet-Nylon-Fixed-Seat-For-Raspberry-Pi-23-p-1216221.html?rmmds=search&cur_warehouse=CN
@@ -14,6 +16,16 @@ https://www.banggood.com/X820-2_5-Inch-SATA-HDD-SSD-USB3_0-Storage-Expansion-Boa
 https://www.amazon.ca/gp/product/B014T2IHQ8/ref=ox_sc_saved_title_2?smid=A16L2DSZFKYSND&psc=1
 
 https://www.amazon.ca/gp/product/B074P27K5S/ref=ox_sc_saved_title_1?smid=A1JJS9YI21E99N&psc=1
+
+## Bootloader - multiboot - berryboot
+
+Download from sourceforge https://sourceforge.net/projects/berryboot/
+
+### Steps
+
+https://www.berryterminal.com/doku.php/berryboot
+
+https://www.berryterminal.com/lib/exe/fetch.php/berryboot-menu.png
 
 ## Initial setup
 
