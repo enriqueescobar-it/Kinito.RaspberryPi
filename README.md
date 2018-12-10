@@ -64,6 +64,7 @@ sudo apt-get upgrade
 ## Unify root path
 
 ```
+# TO DARWIN
 if [ ! -e "/etc/bash.bashrc" ] ;
   then
     ln -s /etc/bashrc /etc/bash.bashrc ;
@@ -91,6 +92,46 @@ fi ;
 if [ ! -d "/mnt" ] ;
   then
     mkdir /mnt ;
+fi ;
+if [ ! -d "/opt" ] ;
+  then
+    mkdir -p /opt/{bin/,lib/,etc/,build/} ;
+fi ;
+if [ ! -d "/proc" ] ;
+  then
+mkdir /proc ;
+fi ;
+if [ ! -d "/selinux" ] ;
+  then
+mkdir /selinux ;
+fi ;
+if [ ! -d "/srv" ] ;
+  then
+mkdir /srv ;
+fi ;
+if [ ! -d "/sys" ] ;
+  then
+mkdir /sys ;
+fi ;
+if [ ! -d "/root" ] ;
+  then
+ln -s /private/var/root /root ;
+fi ;
+if [ ! -d "/tftpboot" ] ;
+  then
+ln -s /private/tftpboot /tftpboot ;
+fi ;
+if [ ! -d "/etc" ] ;
+  then
+ln -s /private/etc /etc ;
+fi ;
+if [ ! -d "/var" ] ;
+  then
+ln -s /private/var /var ;
+fi ;
+if [ ! -d "/tmp" ] ;
+  then
+ln -s /private/tmp /tmp ;
 fi ;
 ```
 
