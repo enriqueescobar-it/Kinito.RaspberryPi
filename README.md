@@ -73,6 +73,7 @@ sudo apt-get autoremove
 
 ```
 cat /etc/issue ;
+cat /etc/debian_version ;
 # BASH files
 # creating ~/.bash*
 touch ~/.bash{rc,_history,_profile,_login,_logout,_aliases} ;
