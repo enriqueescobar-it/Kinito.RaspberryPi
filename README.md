@@ -64,6 +64,7 @@ sudo apt-get upgrade
 ## Unify root path
 
 ```
+cat /etc/issue ;
 # TO DARWIN
 if [ ! -e "/etc/bash.bashrc" ] ;
   then
@@ -133,6 +134,66 @@ if [ ! -d "/tmp" ] ;
   then
 ln -s /private/tmp /tmp ;
 fi ;
+# CYGWIN
+if [ ! -d "/etc/bashrc" ] ;
+  then
+    ln -s /etc/bash.bashrc /etc/bashrc ; ;
+fi ;
+if [ ! -d "/cygdrive" ] ;
+  then
+    ln -s /cygdrive /media ;
+fi ;
+if [ ! -d "/boot" ] ;
+  then
+mkdir /boot ;
+fi ;
+if [ ! -d "/dev" ] ;
+  then
+    mkdir /dev ;
+fi ;
+if [ ! -d "/initrd" ] ;
+  then
+    mkdir /initrd ;
+fi ;
+if [ ! -d "/misc" ] ;
+  then
+    mkdir /misc ;
+fi ;
+if [ ! -d "/tmp" ] ;
+  then
+    mkdir /mnt ;
+fi ;
+if [ ! -d "/net" ] ;
+  then
+    mkdir /net ;
+fi ;
+if [ ! -d "/opt" ] ;
+  then
+    mkdir -p /opt/{bin/,lib/,etc/,build/} ;
+fi ;
+if [ ! -d "/root" ] ;
+  then
+    mkdir /root ;
+fi ;
+if [ ! -d "/selinux" ] ;
+  then
+    mkdir /selinux ;
+fi ;
+if [ ! -d "/srv" ] ;
+  then
+    mkdir /srv ;
+fi ;
+if [ ! -d "/sys" ] ;
+  then
+    mkdir /sys ;
+fi ;
+if [ ! -d "/tftpboot" ] ;
+  then
+    mkdir /tftpboot ;
+fi ;
+# BASH files
+# creating ~/.bash*
+touch ~/.bash{rc,_history,_profile,_login,_logout,_aliases} ;
 ```
 
 ## Scan with AngryIP scanner
