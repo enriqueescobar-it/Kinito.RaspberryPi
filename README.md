@@ -56,6 +56,8 @@ http://blog.nunosenica.com/reduce-write-operations-to-sd-card-with-raspbian/
 
 http://duinorasp.hansotten.com/sd-card-lifetime-how-to-extend/
 
+https://www.zdnet.com/article/raspberry-pi-extending-the-life-of-the-sd-card/
+
 ```
 sudo su
 service dphys-swapfile stop
