@@ -130,10 +130,6 @@ if [ ! -d "/proc" ] ;
   then
 mkdir /proc ;
 fi ;
-if [ ! -d "/selinux" ] ;
-  then
-mkdir /selinux ;
-fi ;
 if [ ! -d "/srv" ] ;
   then
 mkdir /srv ;
