@@ -118,10 +118,6 @@ if [ ! -d "/initrd" ] ;
   then
     mkdir /initrd ;
 fi ;
-if [ ! -d "/misc" ] ;
-  then
-    mkdir /misc ;
-fi ;
 if [ ! -d "/mnt" ] ;
   then
     mkdir /mnt ;
