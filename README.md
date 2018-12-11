@@ -54,6 +54,8 @@ https://www.framboise314.fr/et-si-on-se-passait-du-swap/
 
 http://blog.nunosenica.com/reduce-write-operations-to-sd-card-with-raspbian/
 
+http://duinorasp.hansotten.com/sd-card-lifetime-how-to-extend/
+
 ```
 sudo su
 service dphys-swapfile stop
