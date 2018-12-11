@@ -40,6 +40,12 @@ https://www.berryterminal.com/lib/exe/fetch.php/berryboot-menu.png
 7. Overclock: this is up to you, I usually choose Medium, which makes the Pi run a little bit faster at the expense of power and potential component damange
 8. Advanced options: choose A4 SSH -- this will enable secure shell access, which means that you can control your Raspberry Pi from a remote computer (extremely useful)
 
+## Pimp your desktop
+
+```
+sudo apt-get -y install wbar wbar-config
+```
+
 ## Increase RAM
 
 ```
