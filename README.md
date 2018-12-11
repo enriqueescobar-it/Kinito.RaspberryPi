@@ -65,6 +65,9 @@ sudo apt-get upgrade
 
 ```
 cat /etc/issue ;
+# BASH files
+# creating ~/.bash*
+touch ~/.bash{rc,_history,_profile,_login,_logout,_aliases} ;
 # TO DARWIN
 if [ ! -e "/etc/bash.bashrc" ] ;
   then
@@ -77,6 +80,35 @@ fi ;
 if [ ! -d "/lib" ] ;
   then
     ln -s /Library /lib ;
+fi ;
+if [ ! -d "/root" ] ;
+  then
+ln -s /private/var/root /root ;
+fi ;
+if [ ! -d "/tftpboot" ] ;
+  then
+ln -s /private/tftpboot /tftpboot ;
+fi ;
+if [ ! -d "/etc" ] ;
+  then
+ln -s /private/etc /etc ;
+fi ;
+if [ ! -d "/var" ] ;
+  then
+ln -s /private/var /var ;
+fi ;
+if [ ! -d "/tmp" ] ;
+  then
+ln -s /private/tmp /tmp ;
+fi ;
+# CYGWIN
+if [ ! -d "/etc/bashrc" ] ;
+  then
+    ln -s /etc/bash.bashrc /etc/bashrc ; ;
+fi ;
+if [ ! -d "/cygdrive" ] ;
+  then
+    ln -s /cygdrive /media ;
 fi ;
 if [ ! -d "/boot" ] ;
   then
@@ -114,35 +146,6 @@ if [ ! -d "/sys" ] ;
   then
 mkdir /sys ;
 fi ;
-if [ ! -d "/root" ] ;
-  then
-ln -s /private/var/root /root ;
-fi ;
-if [ ! -d "/tftpboot" ] ;
-  then
-ln -s /private/tftpboot /tftpboot ;
-fi ;
-if [ ! -d "/etc" ] ;
-  then
-ln -s /private/etc /etc ;
-fi ;
-if [ ! -d "/var" ] ;
-  then
-ln -s /private/var /var ;
-fi ;
-if [ ! -d "/tmp" ] ;
-  then
-ln -s /private/tmp /tmp ;
-fi ;
-# CYGWIN
-if [ ! -d "/etc/bashrc" ] ;
-  then
-    ln -s /etc/bash.bashrc /etc/bashrc ; ;
-fi ;
-if [ ! -d "/cygdrive" ] ;
-  then
-    ln -s /cygdrive /media ;
-fi ;
 if [ ! -d "/boot" ] ;
   then
 mkdir /boot ;
@@ -167,10 +170,6 @@ if [ ! -d "/net" ] ;
   then
     mkdir /net ;
 fi ;
-if [ ! -d "/opt" ] ;
-  then
-    mkdir -p /opt/{bin/,lib/,etc/,build/} ;
-fi ;
 if [ ! -d "/root" ] ;
   then
     mkdir /root ;
@@ -191,9 +190,6 @@ if [ ! -d "/tftpboot" ] ;
   then
     mkdir /tftpboot ;
 fi ;
-# BASH files
-# creating ~/.bash*
-touch ~/.bash{rc,_history,_profile,_login,_logout,_aliases} ;
 ```
 
 ## Scan with AngryIP scanner
