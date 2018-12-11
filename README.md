@@ -50,6 +50,10 @@ sudo apt-get -y install wbar wbar-config
 
 https://www.bitpi.co/2015/02/11/how-to-change-raspberry-pis-swapfile-size-on-rasbian/
 
+https://www.framboise314.fr/et-si-on-se-passait-du-swap/
+
+http://blog.nunosenica.com/reduce-write-operations-to-sd-card-with-raspbian/
+
 ```
 sudo su
 service dphys-swapfile stop
