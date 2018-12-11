@@ -146,10 +146,6 @@ if [ ! -d "/sys" ] ;
   then
 mkdir /sys ;
 fi ;
-if [ ! -d "/boot" ] ;
-  then
-mkdir /boot ;
-fi ;
 if [ ! -d "/dev" ] ;
   then
     mkdir /dev ;
