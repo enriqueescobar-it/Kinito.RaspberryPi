@@ -48,6 +48,8 @@ sudo apt-get -y install wbar wbar-config
 
 ## Increase RAM
 
+https://www.bitpi.co/2015/02/11/how-to-change-raspberry-pis-swapfile-size-on-rasbian/
+
 ```
 sudo su
 service dphys-swapfile stop
