@@ -25,15 +25,25 @@ Download from sourceforge https://sourceforge.net/projects/berryboot/
 
 https://www.berryterminal.com/doku.php/berryboot
 
+1. Download ZIP
+2. Decompress into SD Card 32 Gb
+3. Choose from menu options
 https://www.berryterminal.com/lib/exe/fetch.php/berryboot-menu.png
+4. Download Raspbian FULL
+5. Log in
+
+## Initial update/ upgrade
+
+Plug your SenseHAT and run
+```
+sudo apt-get -y update && sudo apt-get -y uprade && sudo apt-get -y dist-upgrade
+```
 
 ## Initial setup
 
 1. Expand Filesystem: no need to do this — some may disagree on this point
 2. Change User Password: recommended to change this, as using the default password can cause security concerns
-
 3. Enable Boot to Desktop/Scratch: by default, this is set to console, which is what we want to keep
-
 4. Internationalisation Options: set your timezone (if in the US, choose America, then find the correct city with your timezone)
 5. Enable Camera: no (you can always change this later)
 6. Add to Rastrack: no
