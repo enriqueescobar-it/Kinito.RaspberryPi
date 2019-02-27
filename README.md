@@ -52,8 +52,29 @@ sudo apt-get -y update && sudo apt-get -y uprade && sudo apt-get -y dist-upgrade
 
 ## Pimp your desktop
 
+Conky https://github.com/novaspirit/rpi_conky
+
 ```
 sudo apt-get -y install wbar wbar-config conky
+```
+
+```
+wget -O /home/pi/.conkyrc https://raw.githubusercontent.com/novaspirit/rpi_conky/master/rpi3_conkyrc
+
+sudo nano /usr/bin/conky.sh
+#!/bin/sh
+(sleep 4s && conky) &
+exit 0
+
+sudo nano /etc/xdg/autostart/conky.desktop
+[Desktop Entry]
+Name=Conky Bar
+Type=Application
+Exec=/usr/bin/conky.sh
+Terminal=false
+Icon=/usr/share/pixmaps/wbar/wbar.png
+Comment=A ligth and fast SysInfo
+Categories=Utility;
 ```
 
 ## Increase RAM
