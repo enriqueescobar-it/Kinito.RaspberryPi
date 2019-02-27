@@ -53,7 +53,7 @@ sudo apt-get -y update && sudo apt-get -y uprade && sudo apt-get -y dist-upgrade
 ## Pimp your desktop
 
 ```
-sudo apt-get -y install wbar wbar-config
+sudo apt-get -y install wbar wbar-config conky
 ```
 
 ## Increase RAM
