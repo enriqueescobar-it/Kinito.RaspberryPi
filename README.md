@@ -1,9 +1,7 @@
 # Kinito.RaspberryPi
 Kinito RaspberryPi Description
 
-## 7inch Display-B
-
-800x480 pixel MPI 7001 v1.3
+## 7inch Display-B 800x480 pixel MPI 7001 v1.3
 
 ```
 cd /opt
