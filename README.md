@@ -85,7 +85,8 @@ sudo chmod -R 755 LCD-show
 cd LCD-show
 ```
 
-In case of 7inch HDMI Display-B-800X480(MPI7001)
+### LCD7B-show In case of 7inch HDMI Display-B-800X480(MPI7001)
+
 > sudo ./LCD7B-show
 
 ```
@@ -117,7 +118,8 @@ sudo cp ./usr/40-libinput.conf-HDMI7B /etc/X11/xorg.conf.d/40-libinput.conf
 sudo reboot
 ```
 
-To revert back to the traditional HDMI display
+### LCD-hdmi In case to the traditional HDMI display
+
 > sudo ./LCD-hdmi
 
 ```
