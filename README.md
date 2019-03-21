@@ -1,6 +1,22 @@
 # Kinito.RaspberryPi
 Kinito RaspberryPi Description
 
+## 7inch Display-B
+
+800x480 pixel MPI 7001 v1.3
+> cd /opt
+> sudo rm -rf LCD-show
+> sudo git clone https://github.com/goodtft/LCD-show.git
+> sudo chmod -R 755 LCD-show
+> cd LCD-show
+
+In case of 7inch HDMI Display-B-800X480(MPI7001)
+> sudo ./LCD7B-show
+
+To revert back to the traditional HDMI display
+> sudo ./LCD-hdmi
+
+
 ## Goodies
 
 https://www.banggood.com/search/raspberry-pi-3-cases.html?sbc=1
