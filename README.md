@@ -1,6 +1,13 @@
 # Kinito.RaspberryPi
 Kinito RaspberryPi Description
 
+## Initial update/ upgrade
+
+Plug your SenseHAT and run
+```
+sudo apt-get -y update && sudo apt-get -y uprade && sudo apt-get -y dist-upgrade
+```
+
 ## 7inch Display-B 800x480 pixel MPI 7001 v1.3
 
 ```
@@ -48,13 +55,6 @@ https://www.berryterminal.com/doku.php/berryboot
 https://www.berryterminal.com/lib/exe/fetch.php/berryboot-menu.png
 4. Download Raspbian FULL
 5. Log in
-
-## Initial update/ upgrade
-
-Plug your SenseHAT and run
-```
-sudo apt-get -y update && sudo apt-get -y uprade && sudo apt-get -y dist-upgrade
-```
 
 ## Initial setup
 
