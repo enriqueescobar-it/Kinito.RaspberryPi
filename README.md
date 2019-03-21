@@ -41,24 +41,37 @@ sudo apt-get -y install wbar wbar-config conky
 
 ### Conky setup
 
-Conky https://github.com/novaspirit/rpi_conky
+```
+sudo apt-get -y install conky
+```
+
+Download the conkyrc file to home directory as .conkyrc
 
 ```
-wget -O /home/pi/.conkyrc https://raw.githubusercontent.com/novaspirit/rpi_conky/master/rpi3_conkyrc
+wget -O /home/pi/.conkyrc https://raw.githubusercontent.com/enriqueescobar-askida/Kinito.RaspberryPi/master/Setup/rpi3_conkyrc.txt
+```
 
-sudo nano /usr/bin/conky.sh
+Create a refresh rate file
+
+> sudo nano /usr/bin/conky.sh
+
+```
 #!/bin/sh
 (sleep 4s && conky) &
 exit 0
+```
 
-sudo nano /etc/xdg/autostart/conky.desktop
+Create an auto launch file
+
+> sudo nano /etc/xdg/autostart/conky.desktop
+
+```
 [Desktop Entry]
-Name=Conky Bar
+Name=conky
 Type=Application
-Exec=/usr/bin/conky.sh
+Exec=sh /usr/bin/conky.sh
 Terminal=false
-Icon=/usr/share/pixmaps/wbar/wbar.png
-Comment=A ligth and fast SysInfo
+Comment=system monitoring tool.
 Categories=Utility;
 ```
 
