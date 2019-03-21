@@ -1,14 +1,68 @@
 # Kinito.RaspberryPi
 Kinito RaspberryPi Description
 
-## Initial update/ upgrade
+## Initial update & upgrade
 
 Plug your SenseHAT and run
+
 ```
 sudo apt-get -y update && sudo apt-get -y uprade && sudo apt-get -y dist-upgrade
 ```
 
-## 7inch Display-B 800x480 pixel MPI 7001 v1.3
+### Initial system update & upgrade
+
+```
+sudo apt-get -y dist-upgrade
+sudo apt-get autoremove
+sudo apt-get -y update && sudo apt-get -y upgrade
+sudo rpi-update
+sudo rpi-update 240
+sudo reboot
+```
+
+## Initial setup
+
+1. Expand Filesystem: no need to do this — some may disagree on this point
+2. Change User Password: recommended to change this, as using the default password can cause security concerns
+3. Enable Boot to Desktop/Scratch: by default, this is set to console, which is what we want to keep
+4. Internationalisation Options: set your timezone (if in the US, choose America, then find the correct city with your timezone)
+5. Enable Camera: no (you can always change this later)
+6. Add to Rastrack: no
+7. Overclock: this is up to you, I usually choose Medium, which makes the Pi run a little bit faster at the expense of power and potential component damange
+8. Advanced options: choose A4 SSH -- this will enable secure shell access, which means that you can control your Raspberry Pi from a remote computer (extremely useful)
+
+## Desktop setup
+
+### Wbar setup
+
+```
+sudo apt-get -y install wbar wbar-config conky
+```
+
+### Conky setup
+
+Conky https://github.com/novaspirit/rpi_conky
+
+```
+wget -O /home/pi/.conkyrc https://raw.githubusercontent.com/novaspirit/rpi_conky/master/rpi3_conkyrc
+
+sudo nano /usr/bin/conky.sh
+#!/bin/sh
+(sleep 4s && conky) &
+exit 0
+
+sudo nano /etc/xdg/autostart/conky.desktop
+[Desktop Entry]
+Name=Conky Bar
+Type=Application
+Exec=/usr/bin/conky.sh
+Terminal=false
+Icon=/usr/share/pixmaps/wbar/wbar.png
+Comment=A ligth and fast SysInfo
+Categories=Utility;
+```
+
+## 7inch Display-B 800x480 pixel MPI 7001 v1.3 setup
 
 ```
 cd /opt
@@ -97,44 +151,6 @@ https://www.berryterminal.com/lib/exe/fetch.php/berryboot-menu.png
 4. Download Raspbian FULL
 5. Log in
 
-## Initial setup
-
-1. Expand Filesystem: no need to do this — some may disagree on this point
-2. Change User Password: recommended to change this, as using the default password can cause security concerns
-3. Enable Boot to Desktop/Scratch: by default, this is set to console, which is what we want to keep
-4. Internationalisation Options: set your timezone (if in the US, choose America, then find the correct city with your timezone)
-5. Enable Camera: no (you can always change this later)
-6. Add to Rastrack: no
-7. Overclock: this is up to you, I usually choose Medium, which makes the Pi run a little bit faster at the expense of power and potential component damange
-8. Advanced options: choose A4 SSH -- this will enable secure shell access, which means that you can control your Raspberry Pi from a remote computer (extremely useful)
-
-## Pimp your desktop
-
-Conky https://github.com/novaspirit/rpi_conky
-
-```
-sudo apt-get -y install wbar wbar-config conky
-```
-
-```
-wget -O /home/pi/.conkyrc https://raw.githubusercontent.com/novaspirit/rpi_conky/master/rpi3_conkyrc
-
-sudo nano /usr/bin/conky.sh
-#!/bin/sh
-(sleep 4s && conky) &
-exit 0
-
-sudo nano /etc/xdg/autostart/conky.desktop
-[Desktop Entry]
-Name=Conky Bar
-Type=Application
-Exec=/usr/bin/conky.sh
-Terminal=false
-Icon=/usr/share/pixmaps/wbar/wbar.png
-Comment=A ligth and fast SysInfo
-Categories=Utility;
-```
-
 ## Increase RAM
 
 https://www.bitpi.co/2015/02/11/how-to-change-raspberry-pis-swapfile-size-on-rasbian/
@@ -157,19 +173,6 @@ nano /etc/dphys-swapfile
 	# the value of CONF_SWAPSIZE to the initial value in order
 	# to stand a micro SD card long use.
 service dphys-swapfile start
-```
-
-## Update & upgrade system
-
-```
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get dist-upgrade
-sudo apt-get autoremove
-sudo apt-get update && sudo apt-get upgrade
-sudo rpi-update
-sudo rpi-update 240
-sudo reboot
 ```
 
 ## Unify root path
