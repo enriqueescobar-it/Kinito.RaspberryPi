@@ -3,8 +3,10 @@
 Kinito RaspberryPi Description
 
 <!-- TOC -->
+
 auto
 auto
+
 - [Kinito.RaspberryPi](#kinitoraspberrypi)
 - auto    - [Initial update & upgrade](#initial-update--upgrade)
 - auto        - [Initial system update & upgrade](#initial-system-update--upgrade)
@@ -25,8 +27,10 @@ auto
 - auto    - [Map network](#map-network)
 - auto    - [Improve your router channel settings](#improve-your-router-channel-settings)
 - auto    - [TO DO](#to-do)
+
 auto
 auto
+
 <!-- /TOC -->
 
 ## Initial update & upgrade
