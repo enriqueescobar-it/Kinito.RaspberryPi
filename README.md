@@ -1,5 +1,33 @@
 # Kinito.RaspberryPi
+
 Kinito RaspberryPi Description
+
+<!-- TOC -->
+auto
+auto
+- [Kinito.RaspberryPi](#kinitoraspberrypi)
+- auto    - [Initial update & upgrade](#initial-update--upgrade)
+- auto        - [Initial system update & upgrade](#initial-system-update--upgrade)
+- auto    - [Initial setup](#initial-setup)
+- auto    - [Desktop setup](#desktop-setup)
+- auto        - [Wbar setup](#wbar-setup)
+- auto        - [Conky setup](#conky-setup)
+- auto    - [7inch Display-B 800x480 pixel MPI 7001 v1.3 setup](#7inch-display-b-800x480-pixel-mpi-7001-v13-setup)
+- auto        - [LCD7B-show In case of 7inch HDMI Display-B-800X480(MPI7001)](#lcd7b-show-in-case-of-7inch-hdmi-display-b-800x480mpi7001)
+- auto        - [LCD-hdmi In case to the traditional HDMI display](#lcd-hdmi-in-case-to-the-traditional-hdmi-display)
+- auto    - [Goodies](#goodies)
+- auto    - [Bootloader - multiboot - berryboot](#bootloader---multiboot---berryboot)
+- auto        - [Steps](#steps)
+- auto    - [Increase RAM](#increase-ram)
+- auto    - [Unify root path](#unify-root-path)
+- auto    - [Scan with AngryIP scanner](#scan-with-angryip-scanner)
+- auto    - [Improve your intrusion check](#improve-your-intrusion-check)
+- auto    - [Map network](#map-network)
+- auto    - [Improve your router channel settings](#improve-your-router-channel-settings)
+- auto    - [TO DO](#to-do)
+auto
+auto
+<!-- /TOC -->
 
 ## Initial update & upgrade
 
