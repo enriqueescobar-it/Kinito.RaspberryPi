@@ -21,9 +21,50 @@ cd LCD-show
 In case of 7inch HDMI Display-B-800X480(MPI7001)
 > sudo ./LCD7B-show
 
+```
+sudo cp -rf ./boot/config-7B-800x480.txt /boot/config.txt 
+if [ -b /dev/mmcblk0p7 ]; then
+sudo cp ./usr/cmdline.txt-noobs /boot/cmdline.txt
+else
+sudo cp ./usr/cmdline.txt /boot/
+fi
+sudo cp ./usr/inittab /etc/
+sudo cp -rf ./usr/99-fbturbo.conf-HDMI /usr/share/X11/xorg.conf.d/99-fbturbo.conf 
+nodeplatform=`uname -n`
+kernel=`uname -r`
+version=`uname -v`
+if test "$nodeplatform" = "raspberrypi";then
+echo "this is raspberrypi kernel"
+version=${version%% *}
+version=${version#*#}
+echo $version
+if test $version -lt 970;then
+echo "reboot"
+else
+echo "need to update touch configuration"
+sudo apt-get install xserver-xorg-input-evdev
+fi
+fi
+sudo mkdir /etc/X11/xorg.conf.d
+sudo cp ./usr/40-libinput.conf-HDMI7B /etc/X11/xorg.conf.d/40-libinput.conf
+sudo reboot
+```
+
 To revert back to the traditional HDMI display
 > sudo ./LCD-hdmi
 
+```
+sudo cp -rf ./usr/modules-HDMI  /etc/modules
+sudo cp -rf ./usr/99-fbturbo.conf-HDMI  /usr/share/X11/xorg.conf.d/99-fbturbo.conf
+sudo cp ./boot/config-nomal.txt /boot/config.txt
+if [ -b /dev/mmcblk0p7 ]; then
+sudo cp ./usr/cmdline.txt-noobs /boot/cmdline.txt
+else
+sudo cp ./usr/cmdline.txt /boot/
+fi
+sudo cp ./usr/inittab /etc/
+sudo reboot
+```
 
 ## Goodies
 
