@@ -255,21 +255,6 @@ https://www.amazon.ca/gp/product/B014T2IHQ8/ref=ox_sc_saved_title_2?smid=A16L2DS
 
 https://www.amazon.ca/gp/product/B074P27K5S/ref=ox_sc_saved_title_1?smid=A1JJS9YI21E99N&psc=1
 
-## Bootloader - multiboot - berryboot
-
-Download from sourceforge https://sourceforge.net/projects/berryboot/
-
-### Steps
-
-https://www.berryterminal.com/doku.php/berryboot
-
-1. Download ZIP
-2. Decompress into SD Card 32 Gb
-3. Choose from menu options
-https://www.berryterminal.com/lib/exe/fetch.php/berryboot-menu.png
-4. Download Raspbian FULL
-5. Log in
-
 ## Increase RAM
 
 https://www.bitpi.co/2015/02/11/how-to-change-raspberry-pis-swapfile-size-on-rasbian/
