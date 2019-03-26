@@ -76,7 +76,86 @@ Comment=system monitoring tool.
 Categories=Utility;
 ```
 
-## 7inch Display-B 800x480 pixel MPI 7001 v1.3 setup
+## Server Setup
+
+### Webmin Server
+
+Create webmin.sources.list with the two lines
+
+> sudo nano /etc/apt/sources.list.d/webmin.list
+
+```
+deb http://download.webmin.com/download/repository sarge contrib
+deb http://webmin.mirror.somersettechsolutions.co.uk/repository sarge contrib
+```
+
+Or download the webmin list file to home directory as '/etc/apt/sources.list.d/'
+
+```
+sudo wget -O sudo nano /etc/apt/sources.list.d/webmin.list https://raw.githubusercontent.com/enriqueescobar-askida/Kinito.RaspberryPi/master/Setup/rpi3_webmin_list.txt
+```
+
+Install Webmin signing key
+
+```
+sudo su
+cd /root
+wget http://www.webmin.com/jcameron-key.asc
+apt-key add jcameron-key.asc
+exit
+```
+
+Update & upgrade
+
+```
+sudo apt-get -y update && sudo apt-get -y upgrade
+```
+
+Install Webmin and x11VNC
+
+> sudo apt-get -y install webmin x11vnc
+
+Show the desktop
+
+> startx
+
+Create x11VNC password
+
+> x11vnc -storepasswd
+
+Create desktop configuration file
+
+```
+mkdir /home/pi/.config/autostart
+nano /home/pi/.config/autostart/x11vnc.desktop
+```
+
+Add the following lines
+
+```
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=X11VNC
+Exec=x11vnc -forever -usepw -display :0 -ultrafilexfer
+StartupNotify=false
+Terminal=false
+Hidden=false
+```
+
+Download the config autostart x11vnc desktop file to home directory as .config/autostart/x11vnc.desktop
+
+```
+wget -O /home/pi/.config/autostart/x11vnc.desktop https://raw.githubusercontent.com/enriqueescobar-askida/Kinito.RaspberryPi/master/Setup/rpi3_autostart_x11vnc.txt
+```
+
+Reboot again show desktop
+
+> startx
+
+## Display Setup
+
+### 7inch Display-B 800x480 pixel MPI 7001 v1.3 setup
 
 ```
 cd /opt
@@ -86,7 +165,7 @@ sudo chmod -R 755 LCD-show
 cd LCD-show
 ```
 
-### LCD7B-show In case of 7inch HDMI Display-B-800X480(MPI7001)
+#### LCD7B-show In case of 7inch HDMI Display-B-800X480(MPI7001)
 
 > sudo ./LCD7B-show
 
@@ -119,7 +198,7 @@ sudo cp ./usr/40-libinput.conf-HDMI7B /etc/X11/xorg.conf.d/40-libinput.conf
 sudo reboot
 ```
 
-### LCD-hdmi In case to the traditional HDMI display
+#### LCD-hdmi In case to the traditional HDMI display
 
 > sudo ./LCD-hdmi
 
