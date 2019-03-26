@@ -86,6 +86,10 @@ Categories=Utility;
 
 > sudo apt-get -y install argonaut-samba dpsyco-samba fusiondirectory-plugin-samba fusiondirectory-plugin-samba-schema gadmin-samba libcrypt-smbhash-perl python-samba samba samba-common samba-common-bin samba-dev samba-dsdb-modules samba-libs samba-testsuite samba-vfs-modules smbc
 
+### LVM Linux LVM volume system format access library
+
+> sudo apt-get -y install clvm liblinux-lvm-perl liblvm2-dev liblvm2app2.2 liblvm2cmd2.02 libvslvm-dev libvslvm-utils libvslvm1 lvm2 python-libvslvm python-lvm2 python3-libvslvm python3-lvm2 system-config-lvm
+
 ### Webmin Server
 
 Create webmin.sources.list with the two lines
