@@ -78,6 +78,36 @@ Categories=Utility;
 
 ## Server Setup
 
+### SWAP & RAM Setup
+
+#### RAM Setup
+
+https://www.bitpi.co/2015/02/11/how-to-change-raspberry-pis-swapfile-size-on-rasbian/
+
+https://www.framboise314.fr/et-si-on-se-passait-du-swap/
+
+http://blog.nunosenica.com/reduce-write-operations-to-sd-card-with-raspbian/
+
+http://duinorasp.hansotten.com/sd-card-lifetime-how-to-extend/
+
+https://www.zdnet.com/article/raspberry-pi-extending-the-life-of-the-sd-card/
+
+#### SWAP setup
+
+> sudo apt-get -y install dphys-config dphys-swapfile
+
+```
+sudo su
+service dphys-swapfile stop
+nano /etc/dphys-swapfile
+	# The default value of CONF_SWAPSIZE in Raspbian is 100.
+	# We will need to change this to: (empty) ,1024, and so on.
+	# After installing RStudio, it would be better to restore
+	# the value of CONF_SWAPSIZE to the initial value in order
+	# to stand a micro SD card long use.
+service dphys-swapfile start
+```
+
 ### Create a regular user to add int sudoers
 
 ### Install a Terminal Multiplexer
@@ -254,32 +284,6 @@ https://www.banggood.com/X820-2_5-Inch-SATA-HDD-SSD-USB3_0-Storage-Expansion-Boa
 https://www.amazon.ca/gp/product/B014T2IHQ8/ref=ox_sc_saved_title_2?smid=A16L2DSZFKYSND&psc=1
 
 https://www.amazon.ca/gp/product/B074P27K5S/ref=ox_sc_saved_title_1?smid=A1JJS9YI21E99N&psc=1
-
-## Increase RAM
-
-https://www.bitpi.co/2015/02/11/how-to-change-raspberry-pis-swapfile-size-on-rasbian/
-
-https://www.framboise314.fr/et-si-on-se-passait-du-swap/
-
-http://blog.nunosenica.com/reduce-write-operations-to-sd-card-with-raspbian/
-
-http://duinorasp.hansotten.com/sd-card-lifetime-how-to-extend/
-
-https://www.zdnet.com/article/raspberry-pi-extending-the-life-of-the-sd-card/
-
-> sudo apt-get -y install dphys-config dphys-swapfile
-
-```
-sudo su
-service dphys-swapfile stop
-nano /etc/dphys-swapfile
-	# The default value of CONF_SWAPSIZE in Raspbian is 100.
-	# We will need to change this to: (empty) ,1024, and so on.
-	# After installing RStudio, it would be better to restore
-	# the value of CONF_SWAPSIZE to the initial value in order
-	# to stand a micro SD card long use.
-service dphys-swapfile start
-```
 
 ## Unify root path
 
