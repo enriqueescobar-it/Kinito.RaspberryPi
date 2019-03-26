@@ -78,6 +78,14 @@ Categories=Utility;
 
 ## Server Setup
 
+### NTFS support
+
+> sudo apt-get -y install libfsntfs-dev libfsntfs-utils libfsntfs1 libntfs-3g871 ntfs-3g ntfs-3g-dev ntfs-config ntfsdoc python-libfsntfs python3-libfsntfs gdisk
+
+### SAMBA Server
+
+> sudo apt-get -y install argonaut-samba dpsyco-samba fusiondirectory-plugin-samba fusiondirectory-plugin-samba-schema gadmin-samba libcrypt-smbhash-perl python-samba samba samba-common samba-common-bin samba-dev samba-dsdb-modules samba-libs samba-testsuite samba-vfs-modules smbc
+
 ### Webmin Server
 
 Create webmin.sources.list with the two lines
