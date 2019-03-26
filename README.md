@@ -267,6 +267,8 @@ http://duinorasp.hansotten.com/sd-card-lifetime-how-to-extend/
 
 https://www.zdnet.com/article/raspberry-pi-extending-the-life-of-the-sd-card/
 
+> sudo apt-get -y install dphys-config dphys-swapfile
+
 ```
 sudo su
 service dphys-swapfile stop
