@@ -78,6 +78,8 @@ Categories=Utility;
 
 ## Server Setup
 
+> sudo apt-get -y install sysbench
+
 ### Create a regular user to add int sudoers
 
 ### Install a Terminal Multiplexer
