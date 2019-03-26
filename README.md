@@ -78,6 +78,18 @@ Categories=Utility;
 
 ## Server Setup
 
+### Create a regular user to add int sudoers
+
+### Install a Terminal Multiplexer
+
+### Install Latest Version of Tor
+
+### Configure File Sharing with Syncthing
+
+### Install a Code Editor
+
+### Change Default Password & SSH Keys
+
 ### NTFS support
 
 > sudo apt-get -y install libfsntfs-dev libfsntfs-utils libfsntfs1 libntfs-3g871 ntfs-3g ntfs-3g-dev ntfs-config ntfsdoc python-libfsntfs python3-libfsntfs gdisk
