@@ -1,0 +1,1 @@
+elevator=deadline quiet bootmenutimeout=45 datadev=mmcblk0p2 quiet splash plymouth.ignore-serial-consoles
