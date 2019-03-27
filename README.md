@@ -80,6 +80,47 @@ Categories=Utility;
 
 > sudo apt-get -y install sysbench uname lsb-release
 
+uname version
+
+> uname -a
+
+```
+Linux raspberrypi 4.14.83v7-aufs #1 SMP Wed Nov 28 22:52:43 CET 2018 armv7l GNU/Linux
+```
+
+proc version
+
+> cat /proc/version
+
+```
+Linux version 4.14.83v7-aufs (max@lynx) (gcc version 8.2.0 (Buildroot 2018.08-gbbba56f1-dirty)) #1 SMP Wed Nov 28 22:52:43 CET 2018
+```
+
+lsb_release version
+
+> lsb_release -a
+
+```
+No LSB modules are available.
+Distributor ID:	Raspbian
+Description:	Raspbian GNU/Linux 9.8 (stretch)
+Release:	9.8
+Codename:	stretch
+```
+etc os-release version
+
+```
+PRETTY_NAME="Raspbian GNU/Linux 9 (stretch)"
+NAME="Raspbian GNU/Linux"
+VERSION_ID="9"
+VERSION="9 (stretch)"
+ID=raspbian
+ID_LIKE=debian
+HOME_URL="http://www.raspbian.org/"
+SUPPORT_URL="http://www.raspbian.org/RaspbianForums"
+BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"
+```
+
 ### Create a regular user to add int sudoers
 
 ### Install a Terminal Multiplexer
