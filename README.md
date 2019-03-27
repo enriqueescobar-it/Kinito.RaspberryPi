@@ -78,7 +78,7 @@ Categories=Utility;
 
 ## Server Setup
 
-> sudo apt-get -y install sysbench
+> sudo apt-get -y install sysbench uname lsb-release
 
 ### Create a regular user to add int sudoers
 
