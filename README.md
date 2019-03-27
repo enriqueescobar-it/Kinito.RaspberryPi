@@ -78,7 +78,7 @@ Categories=Utility;
 
 ## Server Setup
 
-> sudo apt-get -y install sysbench uname lsb-release
+> sudo apt-get -y install sysbench sinfo uname lsb-release
 
 uname version
 
