@@ -48,7 +48,7 @@ Automatically detects the number of CPU cores to allocate to ZRAM computation, d
 
 Download the script and copy to /usr/bin/ folder
 
-> sudo wget -O /usr/bin/zram.sh https://raw.githubusercontent.com/enriqueescobar-askida/rpi_zram/master/zram.sh
+> sudo wget -O /usr/bin/zram.sh https://raw.githubusercontent.com/enriqueescobar-askida/Kinito.RaspberryPi//master/zram.sh
 
 Make file executable
 
