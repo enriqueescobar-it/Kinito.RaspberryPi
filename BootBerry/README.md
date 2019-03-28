@@ -14,11 +14,19 @@ https://www.berryterminal.com/doku.php/berryboot
 
 ## Backup /boot/*txt
 
-## OS Images (img.gz)
+## BerryBoot OS Images (img.gz) from Alex Goldcheidt
 
-### Kali linux (Sticky Fingers)
+https://berryboot.alexgoldcheidt.com/images/
 
-### Parrot Security
+### BerryBoot Kali linux (Sticky Fingers)
 
-### Cranck Shaft
+https://berryboot.alexgoldcheidt.com/search-downloads/?dl_cat=0&dl_search=kali
+
+### BerryBoot Parrot Security
+
+https://berryboot.alexgoldcheidt.com/search-downloads/?dl_cat=0&dl_search=parrot
+
+### BerryBoot Cranck Shaft
+
+https://berryboot.alexgoldcheidt.com/search-downloads/?dl_cat=0&dl_search=openauto
 
