@@ -14,3 +14,11 @@ https://www.berryterminal.com/doku.php/berryboot
 
 ## Backup /boot/*txt
 
+## OS Images (img.gz)
+
+### Kali linux (Sticky Fingers)
+
+### Parrot Security
+
+### Cranck Shaft
+
