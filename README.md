@@ -37,7 +37,7 @@ sudo reboot
 ### Wbar setup
 
 ```
-sudo apt-get -y install wbar wbar-config conky
+sudo apt-get -y install wbar wbar-config conky kate terminator
 ```
 
 ### Conky setup
@@ -139,7 +139,7 @@ BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"
 
 ### SAMBA Server
 
-> sudo apt-get -y install argonaut-samba dpsyco-samba fusiondirectory-plugin-samba fusiondirectory-plugin-samba-schema gadmin-samba libcrypt-smbhash-perl python-samba samba samba-common samba-common-bin samba-dev samba-dsdb-modules samba-libs samba-testsuite samba-vfs-modules smbc
+> sudo apt-get -y install argonaut-samba dpsyco-samba gadmin-samba libcrypt-smbhash-perl python-samba samba samba-common samba-common-bin samba-dev samba-dsdb-modules samba-libs samba-testsuite samba-vfs-modules smbc
 
 ### LVM Linux LVM volume system format access library
 
