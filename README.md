@@ -76,6 +76,10 @@ Comment=system monitoring tool.
 Categories=Utility;
 ```
 
+## Windows Share Drives
+
+https://www.raspberrypi.org/forums/viewtopic.php?t=125427
+
 ## Server Setup
 
 > sudo apt-get -y install sysbench sinfo uname lsb-release
