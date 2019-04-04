@@ -21,6 +21,23 @@ sudo rpi-update 240
 sudo reboot
 ```
 
+or
+
+```
+sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y full-upgrade &&
+sudo apt-get -y dist-upgrade && sudo apt=get -y autoremove &&
+sudo apt-get -y autoclean && sudo apt-get -y clean
+```
+
+#### If `E: Sub-process /usr/bin/dpkg returned an error code (1)` happens
+
+```
+sudo dpkg --configure -a
+sudo apt-get install -f
+sudo apt remove
+sudo mv /var/lib/dpkg/info/polar-bookshelf.* /tmp
+```
+
 ## Initial setup
 
 1. Expand Filesystem: no need to do this — some may disagree on this point
