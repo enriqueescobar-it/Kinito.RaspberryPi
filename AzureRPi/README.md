@@ -24,6 +24,8 @@
 ## Register a new RPi device onto IoT Hub resource https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-identity-registry#identity-registry-operations
 
 1. IoT Devices https://portal.azure.com/#blade/HubsExtension/BrowseAll
+2. IoT Devices Provisioning WebRPiIoTHubDevicePRovisioningService https://portal.azure.com/#create/Microsoft.IoTDeviceProvisioning
+
 
 
 
