@@ -25,6 +25,7 @@
 
 1. IoT Devices https://portal.azure.com/#blade/HubsExtension/BrowseAll
 2. IoT Devices Provisioning WebRPiIoTHubDevicePRovisioningService https://portal.azure.com/#create/Microsoft.IoTDeviceProvisioning
+3. Add IoT Devices https://portal.azure.com/#@ce57ebe3-a63d-4708-b5cf-c274b48bd26c/resource/subscriptions/72391b61-4b5a-4f6a-b161-eda9ba8fb5d1/resourceGroups/IoTHubResourceGroup/providers/Microsoft.Devices/IotHubs/WebRPiIoTHub/DeviceExplorer
 
 
 
