@@ -24,9 +24,9 @@ sudo reboot
 or
 
 ```
-sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y full-upgrade &&
-sudo apt-get -y dist-upgrade && sudo apt=get -y autoremove &&
-sudo apt-get -y autoclean && sudo apt-get -y clean
+sudo apt-get -y update && sudo apt-get -y upgrade
+sudo apt-get -y dist-upgrade && sudo apt-get -y full-upgrade
+sudo apt-get -y autoremove && sudo apt-get -y autoclean && sudo apt-get -y clean
 ```
 
 #### If `E: Sub-process /usr/bin/dpkg returned an error code (1)` happens
@@ -48,6 +48,12 @@ sudo mv /var/lib/dpkg/info/polar-bookshelf.* /tmp
 6. Add to Rastrack: no
 7. Overclock: this is up to you, I usually choose Medium, which makes the Pi run a little bit faster at the expense of power and potential component damange
 8. Advanced options: choose A4 SSH -- this will enable secure shell access, which means that you can control your Raspberry Pi from a remote computer (extremely useful)
+
+## Initial backup
+
+```
+sudo fdisk dd if=/dev/mmcblk0 of=$OUPUT_USBKEY/RPiOriginal.img
+```
 
 ## Desktop setup
 
