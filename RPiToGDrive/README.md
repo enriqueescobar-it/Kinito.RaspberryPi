@@ -51,4 +51,9 @@ Service Account JSON: GSheetsAPI-73b82ffff956.json
 
 #### GSheets Choose & Enable & Credentials
 
+https://console.developers.google.com/apis/library/sheets.googleapis.com?id=739c20c5-5641-41e8-a938-e55ddc082ad1&project=sheets-api-256717
+
+https://console.developers.google.com/apis/api/sheets.googleapis.com/overview?project=sheets-api-256717
+
+Create credentials
 https://console.developers.google.com/apis/api/sheets.googleapis.com/credentials?project=sheets-api-256717
