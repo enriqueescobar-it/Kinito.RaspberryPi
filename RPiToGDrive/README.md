@@ -14,5 +14,41 @@ Project Name: GSheetsAPI
 Project ID: sheets-api-256717
 Project Number: 701043255328
 
-### Add APIs & Services
+### Add APIs & Services for your project (sheets-api-256717)
 
+Dashboard for project 
+https://console.developers.google.com/apis/dashboard?project=sheets-api-256717
+
+Credentials for project 
+https://console.developers.google.com/apis/credentials?project=sheets-api-256717
+
+Library for project 
+https://console.developers.google.com/apis/library?project=sheets-api-256717
+
+#### GDrive Choose & Enable & Credentials
+
+https://console.developers.google.com/apis/library/drive.googleapis.com?id=e44a1596-da14-427c-9b36-5eb6acce3775&project=sheets-api-256717
+
+https://console.developers.google.com/apis/api/drive.googleapis.com/overview?project=sheets-api-256717
+
+Create credentials 
+https://console.developers.google.com/apis/api/drive.googleapis.com/credentials?project=sheets-api-256717
+
+Help me choose
+> Which API are you using?
+Google Drive API
+> Where will you be calling the API from?
+WebServer (NodeJS or TomCat)
+> What data will you be accessing?
+Application Data
+> Are you planning to use this API with App Engine or Compute Engine?
+No
+
+Service Account Name: GDriveWebServerAppDataNoProjEd
+Service Account Role: Project Editor
+Service Account Id: gdrivewebserverappdatanoprojed
+Service Account JSON: GSheetsAPI-73b82ffff956.json
+
+#### GSheets Choose & Enable & Credentials
+
+https://console.developers.google.com/apis/api/sheets.googleapis.com/credentials?project=sheets-api-256717
