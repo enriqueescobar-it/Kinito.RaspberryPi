@@ -1,0 +1,5 @@
+TemporaryGeneratedFile_*.cs
+*.exe.config
+*.pdb
+*/*/obj/Debug/*
+*/*/bin/Debug/*
