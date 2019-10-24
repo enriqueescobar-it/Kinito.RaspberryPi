@@ -57,3 +57,11 @@ https://console.developers.google.com/apis/api/sheets.googleapis.com/overview?pr
 
 Create credentials
 https://console.developers.google.com/apis/api/sheets.googleapis.com/credentials?project=sheets-api-256717
+
+## Processor
+
+vcgencmd measure_temp
+
+sysbench --test=cpu --cpu-max-prime=20000 --num-threads=4 run
+
+
