@@ -8,6 +8,7 @@ TemporaryGeneratedFile_*.cs
 */*/bin/Debug/*
 */*/*/bin/Debug/*
 *.suo
+/*/*/*/*/*/obj/*
 /HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/obj/Debug/App.g.cs
 /HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/obj/Debug/App.g.i.cs
 /HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/obj/Debug/GuiClient.Properties.Resources.resources
