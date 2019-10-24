@@ -41,3 +41,4 @@ TemporaryGeneratedFile_*.cs
 /HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/bin/Debug/GuiClient.vshost.exe.manifest
 /HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/bin/Debug/Library.dll
 /HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/bin/Debug/Library.pdb
+*.csproj.FileListAbsolute.txt
