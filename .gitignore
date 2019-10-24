@@ -3,3 +3,4 @@ TemporaryGeneratedFile_*.cs
 *.pdb
 */*/obj/Debug/*
 */*/bin/Debug/*
+*.suo
