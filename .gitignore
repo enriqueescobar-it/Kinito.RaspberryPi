@@ -5,6 +5,7 @@ TemporaryGeneratedFile_*.cs
 */*/bin/*
 */*/*/bin/*
 /*/*/*/*/*/bin/*
+/*/*/*/*/*/bin/
 *.suo
 */obj/*
 */*/obj/*
@@ -31,3 +32,11 @@ TemporaryGeneratedFile_*.cs
 /HomeAutomation/06/DotnetConsoleClient/GuiClient/ConsoleClient/bin/Debug/ConsoleClient.vshost.exe.manifest
 /HomeAutomation/06/DotnetConsoleClient/GuiClient/ConsoleClient/bin/Debug/Library.dll
 /HomeAutomation/06/DotnetConsoleClient/GuiClient/ConsoleClient/bin/Debug/Library.pdb
+/HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/bin/Debug/GuiClient.exe
+/HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/bin/Debug/GuiClient.exe.config
+/HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/bin/Debug/GuiClient.pdb
+/HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/bin/Debug/GuiClient.vshost.exe
+/HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/bin/Debug/GuiClient.vshost.exe.config
+/HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/bin/Debug/GuiClient.vshost.exe.manifest
+/HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/bin/Debug/Library.dll
+/HomeAutomation/06/DotnetConsoleClient/GuiClient/GuiClient/bin/Debug/Library.pdb
