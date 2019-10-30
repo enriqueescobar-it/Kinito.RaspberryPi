@@ -41,7 +41,7 @@ def main():
  
     #function to convert bytes to mbps
     mbps = lambda b: b / 1024**2
- 
+
     print("Let's find out the net speeds with server: '{}'\n".format(srv_sponsor))
     for i in range(LOOPTIMES):
         print('Making test #{}'.format(i+1))
