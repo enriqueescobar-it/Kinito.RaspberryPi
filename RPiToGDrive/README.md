@@ -79,4 +79,37 @@ echo "-------------------------------------------"
 echo "GPU => $(/opt/vc/bin/vcgencmd measure_temp)"
 echo "CPU => $((cpu/1000))'C"
 ```
+## FitBit
 
+### Create Fitbit Application
+
+| Key                        | Value                            |
+| -------------------------- | -------------------------------- |
+| ApplicationName            | RPiFit                           |
+| Description                | Raspberry Pi 3 Fitbit            |
+| Application WebSite        | http://google.com                |
+| Organization               | Mine                             |
+| Organization WebSite       | http://google.com                |
+| Terms Of Service Url       | http://google.com                |
+| Privacy Policy Url         | http://google.com                |
+| OAuth 2.0 Application Type | personal                        |
+| Callback URL               | http://127.0.0.1:8080/           |
+| Default Access Type        | Read-Only                        |
+| OAuth 2.0 Client ID        | 22BDC9                           |
+| Client Secret              | cc41ea02e5519cbcd457c357cec3d24c |
+
+### Manage Fitbit Application
+
+https://dev.fitbit.com/apps
+
+### Unofficial API
+
+https://github.com/orcasgit/python-fitbit
+
+```
+git clone https://github.com/orcasgit/python-fitbit.git
+cd python-fitbit
+sudo pip install -r requirements/base.txt
+sudo pip install -r requirements/dev.txt
+sudo pip install -r requirements/test.txt
+```
