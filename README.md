@@ -57,16 +57,10 @@ sudo fdisk dd if=/dev/mmcblk0 of=$OUPUT_USBKEY/RPiOriginal.img bs=512
 
 ## Desktop setup
 
-### Wbar setup
-
-```
-sudo apt-get -y install wbar wbar-config conky kate terminator
-```
-
 ### Conky setup
 
 ```
-sudo apt-get -y install conky
+sudo apt-get -y install conky kate terminator
 ```
 
 Download the conkyrc file to home directory as .conkyrc
