@@ -92,7 +92,7 @@ echo "CPU => $((cpu/1000))'C"
 | Organization WebSite       | http://google.com                |
 | Terms Of Service Url       | http://google.com                |
 | Privacy Policy Url         | http://google.com                |
-| OAuth 2.0 Application Type | personal                        |
+| OAuth 2.0 Application Type | personal                         |
 | Callback URL               | http://127.0.0.1:8080/           |
 | Default Access Type        | Read-Only                        |
 | OAuth 2.0 Client ID        | 22BDC9                           |
