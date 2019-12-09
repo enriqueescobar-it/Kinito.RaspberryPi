@@ -30,12 +30,17 @@ use_spacer right
 
 TEXT
 ${font Arial:size=26}${color Tan1}RPI${color Ivory}LINUX
-
 ${voffset -90}
 ${color DimGray}
 ${font}
-${font Arial:bold:size=20}${color Tan1}SYSTEM ${color DarkSlateGray} ${hr 2}
+
+${font Arial:bold:size=20}${color Tan1}AstroPi ${color DarkSlateGray}${hr 2}
+
+${font Arial:bold:size=20}${color Tan1}PiJuice ${color DarkSlateGray}${hr 2}
+
+${font Arial:bold:size=20}${color Tan1}SYSTEM ${color DarkSlateGray}${hr 2}
 $font${color DimGray}$sysname $kernel $alignr $machine
+OS $alignr${exec lsb_release -ds}
 Frequency $alignr${freq_g cpu0}Ghz
 Uptime $alignr${uptime}
 File System $alignr${fs_type}
