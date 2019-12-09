@@ -8,4 +8,4 @@ def get_battery_temp():
 def get_battery_temp_C():
     return print(get_battery_temp(),'C')
 
-get_battery_temp_C()
+print(get_battery_temp())
