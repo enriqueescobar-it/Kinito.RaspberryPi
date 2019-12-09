@@ -37,6 +37,8 @@ ${font}
 ${font Arial:bold:size=20}${color Tan1}AstroPi ${color DarkSlateGray}${hr 2}
 
 ${font Arial:bold:size=20}${color Tan1}PiJuice ${color DarkSlateGray}${hr 2}
+$font${color DimGray}Temp: $alignr${exec bash /home/pi/pijuice-battery-temp.sh}
+$font${color DimGray}Charge: ${exec bash /home/pi/pijuice-battery-percent.sh}% ${execbar bash /home/pi/pijuice-battery-percent.sh}
 
 ${font Arial:bold:size=20}${color Tan1}SYSTEM ${color DarkSlateGray}${hr 2}
 $font${color DimGray}$sysname $kernel $alignr $machine
