@@ -35,6 +35,10 @@ ${color DimGray}
 ${font}
 
 ${font Arial:bold:size=20}${color Tan1}AstroPi ${color DarkSlateGray}${hr 2}
+$font${color DimGray}HUMID_REL ${exec bash /home/pi/astropi-humid.sh} %$alignc${execbar bash /home/pi/astropi-humid.sh}
+$font${color DimGray}TEMPHUMID ${exec bash /home/pi/astropi-temp-humid.sh} C$alignc${execbar bash /home/pi/astropi-temp-humid.sh}
+$font${color DimGray}TEMPPRESS ${exec bash /home/pi/astropi-temp-pressure.sh} C$alignc${execbar bash /home/pi/astropi-temp-pressure.sh}
+Pressure $alignr${exec bash /home/pi/astropi-pressure.sh}
 
 ${font Arial:bold:size=20}${color Tan1}PiJuice ${color DarkSlateGray}${hr 2}
 $font${color DimGray}TEMPERATURE  ${exec bash /home/pi/pijuice-battery-temp.sh} C$alignc${execbar bash /home/pi/pijuice-battery-temp.sh}
