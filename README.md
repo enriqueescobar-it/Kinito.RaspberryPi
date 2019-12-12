@@ -448,3 +448,17 @@ https://www.min.at/prinz/?x=entry:entry160805-124148
 https://www.hackster.io/dreamteam/gym-bud-with-fitbit-alexa-and-rpi-development-platform-a180c8
 
 http://pdwhomeautomation.blogspot.com/2015/03/using-fitbit-api-on-raspberry-pi-with.html
+
+## Linux with persitence
+
+```
+sudo gparted
+```
+
+Select '/dev/sdb' to create partition with label 'persistence'
+```
+sudo mkdir -p /mnt/usb
+fdisk -l
+sudo mount /dev/sdb2 /mnt/usb
+echo "/ union " > /mnt/usb/persistence.conf
+```
