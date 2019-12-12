@@ -116,6 +116,10 @@ BUG_REPORT_URL="http://www.raspbian.org/RaspbianBugs"
 
 ### Change Default Password & SSH Keys
 
+### exFAT support
+
+> sudo apt-get -y install exfat-fuse exfat-utils
+
 ### NTFS support
 
 > sudo apt-get -y install libfsntfs-dev libfsntfs-utils libfsntfs1 libntfs-3g871 ntfs-3g ntfs-3g-dev ntfs-config ntfsdoc python-libfsntfs python3-libfsntfs gdisk
