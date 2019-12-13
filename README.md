@@ -466,3 +466,12 @@ fdisk -l
 sudo mount /dev/sdb2 /mnt/usb
 echo "/ union " > /mnt/usb/persistence.conf
 ```
+
+```
+mkfs.ext3 -L persistence /dev/sdb3
+e2label /dev/sdb3 persistence
+mkdir -p /mnt/my_usb
+mount /dev/sdb3 /mnt/my_usb
+echo "/ union" > /mnt/my_usb/persistence.conf
+umount /dev/sdb3
+```
