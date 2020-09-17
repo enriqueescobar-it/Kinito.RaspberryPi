@@ -475,3 +475,6 @@ mount /dev/sdb3 /mnt/my_usb
 echo "/ union" > /mnt/my_usb/persistence.conf
 umount /dev/sdb3
 ```
+
+### Install camera & view in gallery & dropbox
+https://www.hackster.io/nick-engmann/pidslm-raspberry-pi-dslm-2a86c3
